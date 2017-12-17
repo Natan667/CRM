@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <title><%= content_for?(:title) ? yield(:title) : "CRM" %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag "application", :media => "all" %>
+
+    <%= javascript_include_tag "application" %>
+  </head>
+<body>
+    
+  <div id="main">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="hidden-xs" style="margin-top: 20px"></div>
+          <%= yield %>    
+        </div>
+
+        <footer class="container hidden-xs col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <p>&copy; CRM 2017</p>
+        </footer>
+    </div>
+  </div>
+        
+
+
+  </body>
+</html>
